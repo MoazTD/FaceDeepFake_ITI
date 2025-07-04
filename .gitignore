@@ -1,0 +1,84 @@
+# Deepfake Project .gitignore
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.pyc
+*.pyd
+*.pyo
+venv/
+.venv/
+env/
+.env/
+
+# Data directories (raw and processed data can be very large)
+data/raw/
+data/processed/
+
+# Model Checkpoints and Saved Models
+# PyTorch
+*.pt
+*.pth
+
+# TensorFlow/Keras
+*.h5
+*.keras
+*.tf
+
+# SavedModel format (TensorFlow)
+saved_model/
+*.pb
+
+# ONNX
+*.onnx
+
+# SafeTensor
+*.safetensors
+
+# Other common model formats
+*.bin
+*.ckpt # Checkpoint files (can be general, but common for models)
+
+# Results and Logs
+results/
+checkpoints/
+logs/
+runs/ # Often used by TensorBoard, MLflow, etc.
+
+# Environment-specific files
+.idea/ # PyCharm IDE files
+.vscode/ # VS Code IDE files
+*.sublime-project
+*.sublime-workspace
+
+# Jupyter Notebook specific files
+.ipynb_checkpoints/
+*.ipynb_checkpoints/ # Older versions might put these in subdirectories
+
+# DVC (Data Version Control) related files (if you use DVC)
+.dvc/
+data/.dvcignore # If DVC ignores specific files within data/
+# And actual cached data which DVC manages
+.dvc/cache/
+
+# Experiment tracking tools (e.g., MLflow, Weights & Biases)
+mlruns/
+wandb/
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
+
+# Compiled files
+*.so
+*.dll
+*.dylib
+
+# Temporary and miscellaneous files
+*~
+*.bak
+*.swp
