@@ -1,5 +1,6 @@
 # Deepfake Project .gitignore
-
+*.yaml
+*.bz2
 # Operating System Files
 .DS_Store
 Thumbs.db
