@@ -1,7 +1,7 @@
 # FaceDeepFake_ITI - Advanced Face Swapping Tool
 
 ## Overview
-DeepFake Studio Pro is a comprehensive face swapping application that combines state-of-the-art AI models with an intuitive graphical interface. The tool provides advanced face detection, landmark alignment, and seamless face swapping capabilities for both images and videos.
+FaceDeepFake_ITI is a comprehensive face swapping application that combines state-of-the-art AI models with an intuitive graphical interface. The tool provides advanced face detection, landmark alignment, and seamless face swapping capabilities for both images and videos.
 
 ## Features
 
