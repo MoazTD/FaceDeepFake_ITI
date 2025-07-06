@@ -84,22 +84,6 @@ DeepFake Studio Pro is a comprehensive face swapping application that combines s
    - Adjust sliders for fine-tuning swap parameters
    - Use the playback controls to preview results
 
-## Configuration
-
-The application includes several configuration parameters that can be adjusted in the code:
-
-```python
-# Advanced Face Swap Configuration
-CONF_THRES = 0.45          # Confidence threshold for face detection
-NMS_IOU = 0.35             # Non-maximum suppression IOU threshold
-MODEL_SIZE = 640           # Input size for detection model
-FEATHER_AMOUNT = 15        # Feather amount for mask edges
-BLEND_RATIO = 0.85         # Blend ratio for final composition
-FACE_PADDING = 0.25         # Padding around detected faces
-MASK_BLUR_KERNEL = 21      # Kernel size for mask blurring
-HISTOGRAM_MATCH_STRENGTH = 0.7  # Strength of histogram matching
-SHARPEN_STRENGTH = 0.3     # Sharpening strength
-```
 
 ## Troubleshooting
 
