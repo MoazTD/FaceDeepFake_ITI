@@ -44,8 +44,8 @@ DeepFake Studio Pro is a comprehensive face swapping application that combines s
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/deepfake-studio-pro.git
-   cd deepfake-studio-pro
+   git clone https://github.com/MoazTD/FaceDeepFake_ITI
+   cd FaceDeepFake_ITI
    ```
 
 2. **Create a virtual environment**:
