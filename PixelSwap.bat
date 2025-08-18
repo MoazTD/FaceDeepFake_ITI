@@ -34,13 +34,29 @@ echo ✅ Environment activated! Python version:
 python --version
 echo.
 
+REM Get the directory where this batch file is located
+set "SCRIPT_DIR=%~dp0"
+
+REM Check if main.py exists in the same directory
+if not exist "%SCRIPT_DIR%main.py" (
+    echo ❌ main.py not found in the current directory!
+    echo 📁 Current directory: %SCRIPT_DIR%
+    echo 🔧 Please make sure main.py is in the same folder as this batch file.
+    pause
+    exit /b 1
+)
+
 echo ============================================================
 echo 🚀 RUNNING MAIN.PY SCRIPT
 echo ============================================================
+echo 📁 Script location: %SCRIPT_DIR%main.py
 echo.
 
-REM Run the Python script
-python "C:\Users\ROG\Downloads\New folder (4)\main.py"
+REM Change to the script directory (important for relative imports)
+cd /d "%SCRIPT_DIR%"
+
+REM Run the Python script using relative path
+python main.py
 
 REM Check if the script ran successfully
 if %errorlevel% neq 0 (
