@@ -32,6 +32,7 @@ data/processed/
 # SavedModel format (TensorFlow)
 saved_model/
 *.pb
+*.lib
 
 # ONNX
 *.onnx

@@ -1,0 +1,133 @@
+# =============================================================================
+# Face Swap Application - GPU Requirements (Python 3.10 FIXED)
+# =============================================================================
+# GPU-optimized packages with CUDA support for Python 3.10
+# Install with: pip install -r requirements-gpu-py310.txt
+# 
+# Python Version Requirement: Python 3.10.x ONLY
+# Check Python version: python --version
+# 
+# FIXES FOR PYTHON 3.10:
+# - PyTorch 1.13.1 with CUDA 11.7 (stable for Python 3.10)
+# - Compatible dependency versions
+# - Removed av package (causes compilation issues)
+# - Fixed version conflicts
+# =============================================================================
+
+# =============================================================================
+# CORE SCIENTIFIC STACK
+# =============================================================================
+numpy==1.24.4
+scipy==1.10.1
+scikit-image==0.20.0
+pillow==9.5.0
+imageio==2.31.6
+imageio-ffmpeg==0.4.9
+tqdm==4.66.1
+matplotlib==3.7.5
+psutil==5.9.8
+requests==2.31.0
+typing_extensions>=4.0.0
+
+# =============================================================================
+# COMPUTER VISION
+# =============================================================================
+opencv-python==4.8.1.78
+opencv-contrib-python==4.8.1.78
+ffmpeg-python==0.2.0
+
+# Skip av package (causes Cython compilation issues)
+# Install separately with: conda install -c conda-forge av
+
+# =============================================================================
+# PYTORCH WITH CUDA SUPPORT (PYTHON 3.10 COMPATIBLE)
+# =============================================================================
+# PyTorch 1.13.1 with CUDA 11.7 support (compatible with Python 3.10)
+torch==1.13.1+cu117
+torchvision==0.14.1+cu117
+torchaudio==0.13.1+cu117
+--extra-index-url https://download.pytorch.org/whl/cu117
+
+# =============================================================================
+# AI AND FACE PROCESSING (GPU OPTIMIZED)
+# =============================================================================
+insightface==0.7.3
+onnx==1.14.1
+
+# GPU-optimized ONNX Runtime (compatible version)
+onnxruntime-gpu==1.15.1
+
+# Face enhancement models
+gfpgan==1.3.8
+facexlib==0.3.0
+basicsr==1.4.2
+
+# =============================================================================
+# AUDIO PROCESSING
+# =============================================================================
+moviepy==1.0.3
+soundfile==0.12.1
+pydub==0.25.1
+librosa==0.9.1
+praat-parselmouth==0.4.3
+torchcrepe==0.0.21
+
+# =============================================================================
+# UI FRAMEWORK
+# =============================================================================
+PySide6==6.5.3
+
+# =============================================================================
+# SYSTEM MONITORING
+# =============================================================================
+GPUtil==1.4.0
+trimesh==3.22.5
+
+# =============================================================================
+# MACHINE LEARNING UTILITIES (GPU VERSIONS)
+# =============================================================================
+# GPU-accelerated FAISS (much faster for similarity search)
+faiss-gpu==1.7.4
+
+tensorboard==2.14.1
+tensorboardX==2.6.2.2
+
+# =============================================================================
+# ADDITIONAL UTILITIES
+# =============================================================================
+python-dotenv==1.0.0
+json5==0.9.14
+cython==0.29.36
+protobuf==3.20.3
+
+# =============================================================================
+# GPU SETUP VERIFICATION
+# =============================================================================
+# After installation, verify GPU support:
+# python -c "import torch; print('CUDA available:', torch.cuda.is_available())"
+# python -c "import torch; print('GPU device:', torch.cuda.get_device_name(0) if torch.cuda.is_available() else 'No GPU')"
+# python -c "import onnxruntime as ort; print('GPU providers:', ort.get_available_providers())"
+
+# =============================================================================
+# CUDA REQUIREMENTS
+# =============================================================================
+# Ensure you have:
+# 1. NVIDIA GPU with CUDA Compute Capability 3.5+
+# 2. NVIDIA Driver 450.80.02+ (Linux) or 452.39+ (Windows)
+# 3. CUDA Toolkit 11.7 installed
+# 4. cuDNN 8.x compatible with CUDA 11.7
+# 
+# Download CUDA: https://developer.nvidia.com/cuda-downloads
+# Download cuDNN: https://developer.nvidia.com/cudnn
+
+# =============================================================================
+# POST-INSTALLATION STEPS
+# =============================================================================
+# 1. Install av package with conda (if needed):
+#    conda install -c conda-forge av
+# 
+# 2. Install dlib with conda (if needed):
+#    conda install -c conda-forge dlib
+# 
+# 3. Alternative to dlib:
+#    pip install face_recognition
