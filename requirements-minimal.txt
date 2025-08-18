@@ -1,0 +1,69 @@
+# =============================================================================
+# Face Swap Application - Minimal Requirements (Python 3.10 FIXED)
+# =============================================================================
+# Essential packages only - for basic face swap functionality
+# Install with: pip install -r requirements-minimal-py310.txt
+# 
+# Python Version Requirement: Python 3.10.x ONLY
+# Check Python version: python --version
+# 
+# FIXES FOR PYTHON 3.10:
+# - PyTorch 1.13.1 (no typing.Self issues)
+# - Compatible dependency versions
+# - Removed problematic version ranges
+# =============================================================================
+
+# =============================================================================
+# CORE DEPENDENCIES
+# =============================================================================
+numpy==1.24.4
+opencv-python==4.8.1.78
+pillow==9.5.0
+PySide6==6.5.3
+typing_extensions>=4.0.0
+
+# =============================================================================
+# DEEP LEARNING (PYTHON 3.10 COMPATIBLE)
+# =============================================================================
+torch==1.13.1
+torchvision==0.14.1
+torchaudio==0.13.1
+
+# AI face processing (essential)
+insightface==0.7.3
+onnxruntime-gpu==1.15.1
+
+# =============================================================================
+# AUDIO PROCESSING (BASIC)
+# =============================================================================
+moviepy==1.0.3
+
+# =============================================================================
+# SYSTEM UTILITIES
+# =============================================================================
+psutil==5.9.8
+GPUtil==1.4.0
+
+# =============================================================================
+# ADDITIONAL UTILITIES
+# =============================================================================
+requests==2.31.0
+tqdm==4.66.1
+
+# =============================================================================
+# INSTALLATION NOTES
+# =============================================================================
+# This minimal set provides:
+# - Basic face detection and swapping
+# - Video processing capabilities  
+# - Simple audio handling
+# - GPU acceleration support
+# 
+# Missing features without full requirements:
+# - Advanced face enhancement (GFPGAN)
+# - Audio voice processing
+# - Web interface
+# - Advanced face landmark detection (dlib)
+# 
+# To upgrade to full functionality:
+# pip install -r requirements-python310.txt
